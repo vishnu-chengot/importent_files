@@ -1,0 +1,105 @@
+let lastvalue = ''
+  // function calclick(val) {
+    
+  //   text = document.getElementById("screen")
+   
+  //     text.value += val
+  //   }
+
+  //   function calclick1(val){
+  //     text = document.getElementById("screen")
+  //     lastvalue += val
+  //     // console.log(lastvalue.slice(-1))
+  //     // console.log(lastvalue.slice(-2,-1))
+  //     if (lastvalue.slice(-1) == lastvalue.slice(-2, -1)) {
+  //       console.log('done')
+  //       lastvalue =''
+  //       return false;
+  //     }
+
+
+  //     else {
+  //       text.value += val
+  //       console.log('failed')
+  //     }
+  //   }
+
+function calclick(val) {
+  const text = document.querySelector(".input");
+  const lastChar = lastvalue.slice(-1);
+  lastvalue += val;
+  if (isNaN(val)) {
+    // If the value is an operator, check if the last character is also an operator
+    
+    if (isNaN(lastChar)) {
+      console.log("Invalid input: operator cannot follow another operator.");
+      return false;
+    }
+    else{
+      text.innerHTML += val;
+    }
+  }
+  else{
+    text.innerHTML += val;
+  }
+  
+  // Update lastvalue and calculator screen
+  
+  
+}
+  function clearScreen() {
+    document.querySelector(".input").innerHTML = ""
+    document.querySelector(".output").innerHTML ="0"
+  }
+  function backSpace() {
+    text = document.querySelector(".input")
+    text.innerHTML = text.innerHTML.slice(0, -1)
+    }
+  function btnEqual() {
+      // text = document.getElementById("screen").value
+      // result =eval(text)
+      // document.getElementById("screen").value = result
+
+      // alert("hai")
+      // /[+\-*/%]?([0-9.]+)/g
+      // /[+\-*/]?([0-9.]+)/g
+    const text = document.querySelector(".input").innerHTML;
+    const operands = text.match(/[+\-*/%]?([0-9.]+)/g); // split text into operands
+  let result = parseFloat(operands[0]); // initialize result with first operand
+  for (let i = 1; i < operands.length; i++) {
+        const operator = operands[i][0]; // get the operator (+, -, *, /)
+  const operand = parseFloat(operands[i].slice(1)); // get the operand
+  switch (operator) {
+          case '+':
+  result += operand;
+  break;
+  case '-':
+  result -= operand;
+  break;
+  case '*':
+  result *= operand;
+  break;
+  case '/':
+  result /= operand;
+  break;
+   case '%':
+  result = result % operand;
+  break;
+  
+        }
+      }
+    document.querySelector(".output").innerHTML = "= "+result;
+
+
+    }
+  limit = document.querySelectorAll("button")
+  for (let i = 0; i < limit.length; i++) {
+    document.querySelectorAll("button")[i].addEventListener("click", function () {
+      document.querySelectorAll("button")[i].classList.add("press")
+      setTimeout(function () {
+        document.querySelectorAll("button")[i].classList.remove("press")
+      }, 200)
+    })
+
+  }
+

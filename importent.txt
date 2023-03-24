@@ -1,0 +1,228 @@
+
+// function btnEqual() {
+//   const text = document.querySelector(".input").innerHTML;
+//   const operands = text.match(/[+\-×÷%]?([0-9.]+)/g);
+//   let result = parseFloat(operands[0]);
+//   for (let i = 1; i < operands.length; i++) {
+//     const operator = operands[i][0];
+//     const operand = parseFloat(operands[i].slice(1));
+//     switch (operator) {
+//       case '+':
+//         result += operand;
+//         break;
+//       case '-':
+//         result -= operand;
+//         break;
+//       case '×':
+//         result *= operand;
+//         break;
+//       case '÷':
+//         result /= operand;
+//         break;
+//       case '%':
+//         result = calculatePercentage(result, operand);
+//         break;
+//     }
+//   }
+//   document.querySelector(".output").innerHTML = "= " + result;
+//   let output = document.querySelector(".output")
+//   let in_put = document.querySelector(".input")
+//   output.style.animation = "big 0.5s ease-in-out"
+//   in_put.style.animation = "small 0.5s ease-in-out"
+//   output.style.animationFillMode = "forwards"
+//   in_put.style.animationFillMode = "forwards"
+// }
+// function percentage(){
+  
+//   const text = document.querySelector(".input")
+//   text.innerHTML += "%";
+//   const currentVal = text.innerHTML;
+//   console.log(currentVal)
+//   const lastVal = currentVal.match(/[-+*/]\s*\d+(\.\d+)?%?$/);
+//     console.log(lastVal)
+//     if (!lastVal) return;
+
+//     const percent = parseFloat(lastVal[0]) * 0.01;
+//     const newVal = currentVal.replace(lastVal[0], `* ${percent}`);
+
+//   text.innerHTML = eval(newVal);
+//   document.querySelector(".output").innerHTML = `= ${result.innerHTML}`;
+
+// }
+
+==================================================================================================
+// function calculatePercentage(base, percentage) {
+//   return base * (percentage / 100);
+// }
+============================================================================================
+
+ // If the input value ends with %, extract the number before it
+  // value = value / 100;
+  // if (value.endsWith('%')) {
+  //   console.log(value.slice(0, -2))
+  //   const number = parseFloat(value.slice(0, -1));
+  //   console.log(number)
+  //   if (isNaN(number)) return;
+  //   value = number / 100;
+  // }
+==================================importent calculator code ================================
+
+let lastvalue = ''
+// function calclick(val) {
+//   const text = document.querySelector(".input");
+//   const lastChar = lastvalue.slice(-1);
+//   lastvalue += val;
+//   if (isNaN(val)) {
+
+
+//     if (isNaN(lastChar)) {
+//       console.log("Invalid input: operator cannot follow another operator.");
+//       return false;
+//     }
+//     else {
+//       text.innerHTML += val;
+//     }
+//   }
+//   else {
+//     text.innerHTML += val;
+//   }
+
+// }
+function calclick(val) {
+  const text = document.querySelector(".input");
+  const lastChar = lastvalue.slice(-1);
+  if (isNaN(val)) {
+    if (isNaN(lastChar)) {
+      console.log("Invalid input: operator cannot follow another operator.");
+      text.innerHTML = text.innerHTML.slice(0, -1) + val;
+      lastvalue = lastvalue.slice(0, -1) + val;
+      return false;
+    } else {
+      lastvalue += val;
+      text.innerHTML += val;
+    }
+  } else {
+    lastvalue += val;
+    text.innerHTML += val;
+  }
+}
+function clearScreen() {
+  var output = document.querySelector(".input")
+  var in_put = document.querySelector(".output")
+  output.innerHTML = ""
+  in_put.innerHTML = "0"
+  output.style.animation = ""
+  in_put.style.animation = ""
+}
+function backSpace() {
+  text = document.querySelector(".input")
+  text.innerHTML = text.innerHTML.slice(0, -1)
+}
+function btnEqual() {
+
+  const text = document.querySelector(".input").innerHTML;
+  const operands = text.match(/[+\-×÷%]?([0-9.]+)/g);
+  let result = parseFloat(operands[0]);
+  for (let i = 1; i < operands.length; i++) {
+    const operator = operands[i][0];
+    const operand = parseFloat(operands[i].slice(1));
+    switch (operator) {
+      case '+':
+        result += operand;
+        break;
+      case '-':
+        result -= operand;
+        break;
+      case '×':
+        result *= operand;
+        break;
+      case '÷':
+        result /= operand;
+        break;
+      case '%':
+        console.log()
+        result +=(operand /100);
+        break;
+
+    }
+  }
+  document.querySelector(".output").innerHTML = "= " + result;
+  let output = document.querySelector(".output")
+  let in_put = document.querySelector(".input")
+  output.style.animation = "big 0.5s ease-in-out"
+  in_put.style.animation = "small 0.5s ease-in-out"
+  output.style.animationFillMode = "forwards"
+  in_put.style.animationFillMode = "forwards"
+
+}
+
+function btnBracket() {
+  const text = document.querySelector(".input").innerHTML;
+  const lastChar = lastvalue.slice(-1);
+
+  if (!isNaN(lastChar)) {
+    if (isOpeningBracket) {
+      document.querySelector(".input").innerHTML += "(";
+      lastvalue += "(";
+      isOpeningBracket = false;
+    } else {
+      document.querySelector(".input").innerHTML += ")";
+      lastvalue += ")";
+      isOpeningBracket = true;
+    }
+  }
+}
+limit = document.querySelectorAll("button")
+for (let i = 0; i < limit.length; i++) {
+  document.querySelectorAll("button")[i].addEventListener("click", function () {
+    document.querySelectorAll("button")[i].classList.add("press")
+    setTimeout(function () {
+      document.querySelectorAll("button")[i].classList.remove("press")
+    }, 200)
+  })
+
+}
+
+==========================================percentage================================
+
+
+function percentage() {
+  const input = document.querySelector('.input');
+  const output = document.querySelector('.output');
+  input.innerHTML += "%";
+  // Get the current input value
+  let value = input.innerHTML;
+  console.log(value);
+  if (value.endsWith('%')) {
+    const prevValue = value.split('%')[0];
+    const prevOperator = prevValue.match(/[+\-*\/]/g)?.pop();
+    if (prevOperator && prevValue.length > 1) {
+      const prevNum = prevValue.split(prevOperator).pop();
+      if (prevNum.length > 0 && !isNaN(prevNum)) {
+        value = value.replace(prevNum + '%', prevNum / 100);
+      } else {
+        const firstValue = value.split(prevOperator)[0].trim();
+        const number = parseFloat(prevValue.split('%')[0].split(prevOperator)[1].trim());
+        if (isNaN(number)) return;
+        value = parseFloat(firstValue) + (number / 100) * parseFloat(firstValue);
+      }
+    } else {
+      const prevNum = prevValue;
+      if (prevNum.length > 0 && !isNaN(prevNum)) {
+        value = value.replace(prevNum + '%', prevNum / 100);
+      } else {
+        const firstValue = value.split('+')[0].trim();
+        const number = parseFloat(prevValue.split('%')[0]);
+        if (isNaN(number)) return;
+        value = parseFloat(firstValue) + (number / 100) * parseFloat(firstValue);
+      }
+    }
+  } else {
+    // Convert the value to a number
+    value = parseFloat(value);
+  }
+
+  // Update the input and output
+  input.innerHTML = value;
+  output.innerHTML = `= ${eval(value)}`;
+}

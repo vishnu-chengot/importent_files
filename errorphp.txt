@@ -1,0 +1,4 @@
+access modifier error
+Fatal error: Uncaught Error: Cannot access private property course::$course in C:\xampp\htdocs\day5\accessmodifiers.php:17 Stack trace: #0 {main} thrown in C:\xampp\htdocs\day5\accessmodifiers.php on line 17
+Fatal error: Uncaught Error: Cannot access protected property course::$fee in C:\xampp\htdocs\day5\accessmodifiers.php:18 Stack trace: #0 {main} thrown in C:\xampp\htdocs\day5\accessmodifiers.php on line 18
+Fatal error: Uncaught Error: Call to private method course::getCourse() from global scope in C:\xampp\htdocs\day5\accessmodifiers.php:19 Stack trace: #0 {main} thrown in C:\xampp\htdocs\day5\accessmodifiers.php on line 19

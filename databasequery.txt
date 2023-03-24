@@ -1,0 +1,34 @@
+CREATE TABLE seller_tb (seller_id INT PRIMARY KEY AUTO_INCREMENT,seller_name varchar(250),seller_number BIGINT ,seller_address varchar(250));
+
+
+CREATE TABLE customer_tb (customer_id INT PRIMARY KEY AUTO_INCREMENT,customer_name varchar(250),c_email varchar(250),phone_number BIGINT );
+
+
+INSERT INTO seller_tb (seller_name,seller_number,seller_address) VALUES ('vishnu',9072879546,'chengot poonthottathill');
+
+INSERT INTO customer_tb(customer_name,c_email,phone_number) VALUES ('Revathi','revathigopi@gmail.com',7306148554);
+
+ALTER TABLE customer_tb ADD gender varchar(20);
+
+ALTER TABLE seller_tb ADD gender INT;
+
+ALTER TABLE seller_tb MODIFY COLUMN gender varchar(20);
+
+ALTER TABLE customer_tb DROP gender;
+
+ALTER TABLE seller_tb DROP gender;
+ALTER TABLE product_tb DROP product_des;
+
+DROP TABLE product_tb;
+
+CREATE TABLE product_tb (pro_id INT PRIMARY KEY AUTO_INCREMENT,product_name varchar(250),product_no INT,product_color varchar(30));
+
+UPDATE seller_tb SET seller_name ='revathi' WHERE seller_id =1;
+
+UPDATE seller_tb SET seller_name ='vishnu cp' WHERE seller_id =1;
+
+DELETE FROM seller_tb WHERE seller_id=2;
+
+CREATE TABLE product_tb (product_id INT PRIMARY KEY,product_name varchar(250),product_no INT, seller_fk INT,INDEX seller_fk(seller_fk), FOREIGN KEY(seller_fk) REFERENCES seller_tb(seller_id) ON DELETE CASCADE ON UPDATE CASCADE)
+
+CREATE TABLE orders (order_id INT PRIMARY KEY AUTO_INCREMENT,seller_fk INT ,INDEX seller_fk(seller_fk),FOREIGN KEY (seller_fk) REFERENCES seller_tb(seller_id) ON DELETE CASCADE ON UPDATE CASCADE,product_fk INT,INDEX product_fk(product_fk),FOREIGN KEY (product_fk) REFERENCES product_tb(product_id) ON DELETE CASCADE ON UPDATE CASCADE);

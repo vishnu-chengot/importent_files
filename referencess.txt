@@ -1,0 +1,9 @@
+A session is a way to store information (in variables) to be used across multiple pages.
+
+Unlike a cookie, the information is not stored on the users computer.
+Session variables are set with the PHP global variable: $_SESSION.
+
+
+session_destroy(); is deleting the whole session.
+
+session_unset(); deletes only the variables from session - session still exists. Only data is truncated.

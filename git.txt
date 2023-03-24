@@ -1,0 +1,192 @@
+
+Dell@DESKTOP-BRA207M MINGW64 ~/Desktop/project/ecommerce
+$ git init
+Initialized empty Git repository in C:/Users/Dell/Desktop/project/ecommerce/.git/
+
+Dell@DESKTOP-BRA207M MINGW64 ~/Desktop/project/ecommerce (master)
+$ git add .
+
+Dell@DESKTOP-BRA207M MINGW64 ~/Desktop/project/ecommerce (master)
+$ git commit -m 'first commit'
+[master (root-commit) 21402fe] first commit
+ 163 files changed, 3309 insertions(+)
+ create mode 100644 Procfile
+ create mode 100644 common/__init__.py
+ create mode 100644 common/__pycache__/__init__.cpython-310.pyc
+ create mode 100644 common/__pycache__/admin.cpython-310.pyc
+ create mode 100644 common/__pycache__/apps.cpython-310.pyc
+ create mode 100644 common/__pycache__/models.cpython-310.pyc
+ create mode 100644 common/__pycache__/urls.cpython-310.pyc
+ create mode 100644 common/__pycache__/views.cpython-310.pyc
+ create mode 100644 common/admin.py
+ create mode 100644 common/apps.py
+ create mode 100644 common/migrations/0001_initial.py
+ create mode 100644 common/migrations/0002_users_address.py
+ create mode 100644 common/migrations/0003_seller.py
+ create mode 100644 common/migrations/0004_customer_delete_seller_delete_users.py
+ create mode 100644 common/migrations/0005_alter_customer_table.py
+ create mode 100644 common/migrations/0006_seller.py
+ create mode 100644 common/migrations/0007_seller_user_name.py
+ create mode 100644 common/migrations/__init__.py
+ create mode 100644 common/migrations/__pycache__/0001_initial.cpython-310.pyc
+ create mode 100644 common/migrations/__pycache__/0002_users_address.cpython-310.pyc
+ create mode 100644 common/migrations/__pycache__/0003_seller.cpython-310.pyc
+ create mode 100644 common/migrations/__pycache__/0004_customer_delete_seller_delete_users.cpython-310.pyc
+ create mode 100644 common/migrations/__pycache__/0005_alter_customer_table.cpython-310.pyc
+ create mode 100644 common/migrations/__pycache__/0006_seller.cpython-310.pyc
+ create mode 100644 common/migrations/__pycache__/0007_seller_user_name.cpython-310.pyc
+ create mode 100644 common/migrations/__pycache__/__init__.cpython-310.pyc
+ create mode 100644 common/models.py
+ create mode 100644 common/static/favicon/favicon.ico
+ create mode 100644 common/static/favicon/revu.ico
+ create mode 100644 common/static/images/images (2).png
+ create mode 100644 common/static/images/lamp1.png
+ create mode 100644 common/static/images/lamp2.png
+ create mode 100644 common/static/images/light2.jpg
+ create mode 100644 common/static/images/light4.jpg
+ create mode 100644 common/static/images/light5.jpg
+ create mode 100644 common/static/images/lightone.jpg
+ create mode 100644 common/static/images/login.jpg
+ create mode 100644 common/static/images/lohin-img.jpg
+ create mode 100644 common/static/images/myimage.jpg
+ create mode 100644 common/static/images/myimage1.jpg
+ create mode 100644 common/static/style/grid.css
+ create mode 100644 common/static/style/mystyle.css
+ create mode 100644 common/static/style/newstyle.css
+ create mode 100644 common/static/style/style.css
+ create mode 100644 common/templates/common/customer signup.html
+ create mode 100644 common/templates/common/customer_login.html
+ create mode 100644 common/templates/common/home.html
+ create mode 100644 common/templates/common/master.html
+ create mode 100644 common/templates/common/project home.html
+ create mode 100644 common/templates/common/seller login.html
+ create mode 100644 common/templates/common/seller signup.html
+ create mode 100644 common/tests.py
+ create mode 100644 common/urls.py
+ create mode 100644 common/views.py
+ create mode 100644 customer/__init__.py
+ create mode 100644 customer/__pycache__/__init__.cpython-310.pyc
+ create mode 100644 customer/__pycache__/admin.cpython-310.pyc
+ create mode 100644 customer/__pycache__/apps.cpython-310.pyc
+ create mode 100644 customer/__pycache__/decorator.cpython-310.pyc
+ create mode 100644 customer/__pycache__/models.cpython-310.pyc
+ create mode 100644 customer/__pycache__/urls.cpython-310.pyc
+ create mode 100644 customer/__pycache__/views.cpython-310.pyc
+ create mode 100644 customer/admin.py
+ create mode 100644 customer/apps.py
+ create mode 100644 customer/decorator.py
+ create mode 100644 customer/migrations/0001_initial.py
+ create mode 100644 customer/migrations/__init__.py
+ create mode 100644 customer/migrations/__pycache__/0001_initial.cpython-310.pyc
+ create mode 100644 customer/migrations/__pycache__/__init__.cpython-310.pyc
+ create mode 100644 customer/models.py
+ create mode 100644 customer/static/images/angular-course-training-calicut-kerala.png
+ create mode 100644 customer/static/images/flutter-course-training-calicut-kerala.png
+ create mode 100644 customer/static/images/php-course-training-calicut-kerala.png
+ create mode 100644 customer/static/images/python-course-training-calicut-kerala.png
+ create mode 100644 customer/static/style/main.css
+ create mode 100644 customer/templates/customer/change password.html
+ create mode 100644 customer/templates/customer/checkout.html
+ create mode 100644 customer/templates/customer/home.html
+ create mode 100644 customer/templates/customer/master.html
+ create mode 100644 customer/templates/customer/my cart.html
+ create mode 100644 customer/templates/customer/my order.html
+ create mode 100644 customer/templates/customer/product details.html
+ create mode 100644 customer/templates/customer/profile.html
+ create mode 100644 customer/test.py
+ create mode 100644 customer/tests.py
+ create mode 100644 customer/urls.py
+ create mode 100644 customer/views.py
+ create mode 100644 db.sqlite3
+ create mode 100644 ecom_admin/__init__.py
+ create mode 100644 ecom_admin/__pycache__/__init__.cpython-310.pyc
+ create mode 100644 ecom_admin/__pycache__/admin.cpython-310.pyc
+ create mode 100644 ecom_admin/__pycache__/apps.cpython-310.pyc
+ create mode 100644 ecom_admin/__pycache__/models.cpython-310.pyc
+ create mode 100644 ecom_admin/__pycache__/urls.cpython-310.pyc
+ create mode 100644 ecom_admin/__pycache__/views.cpython-310.pyc
+ create mode 100644 ecom_admin/admin.py
+ create mode 100644 ecom_admin/apps.py
+ create mode 100644 ecom_admin/migrations/__init__.py
+ create mode 100644 ecom_admin/migrations/__pycache__/__init__.cpython-310.pyc
+ create mode 100644 ecom_admin/models.py
+ create mode 100644 ecom_admin/templates/ecom_admin/approve seller.html
+ create mode 100644 ecom_admin/templates/ecom_admin/home.html
+ create mode 100644 ecom_admin/templates/ecom_admin/view customer.html
+ create mode 100644 ecom_admin/templates/ecom_admin/view seller.html
+ create mode 100644 ecom_admin/templates/ecom_admin/view_product.html
+ create mode 100644 ecom_admin/tests.py
+ create mode 100644 ecom_admin/urls.py
+ create mode 100644 ecom_admin/views.py
+ create mode 100644 ecommerce/__init__.py
+ create mode 100644 ecommerce/__pycache__/__init__.cpython-310.pyc
+ create mode 100644 ecommerce/__pycache__/settings.cpython-310.pyc
+ create mode 100644 ecommerce/__pycache__/urls.cpython-310.pyc
+ create mode 100644 ecommerce/__pycache__/wsgi.cpython-310.pyc
+ create mode 100644 ecommerce/asgi.py
+ create mode 100644 ecommerce/settings.py
+ create mode 100644 ecommerce/urls.py
+ create mode 100644 ecommerce/wsgi.py
+ create mode 100644 manage.py
+ create mode 100644 media/product/card1.jpg
+ create mode 100644 media/product/card2.jpg
+ create mode 100644 media/product/card3.jpg
+ create mode 100644 media/product/card5.jpg
+ create mode 100644 media/product/card6.jpg
+ create mode 100644 media/product/light5.jpg
+ create mode 100644 media/seller/IMG_20220106_223107.jpg
+ create mode 100644 media/seller/card3.jpg
+ create mode 100644 media/seller/card4.jpg
+ create mode 100644 media/seller/card6.jpg
+ create mode 100644 media/seller/card6_4OhQHNm.jpg
+ create mode 100644 media/seller/card6_OMXiLSr.jpg
+ create mode 100644 media/seller/card6_Q5PU4yM.jpg
+ create mode 100644 media/seller/card6_ZhlpYF7.jpg
+ create mode 100644 requirements.txt
+ create mode 100644 runtime.txt
+ create mode 100644 seller/__init__.py
+ create mode 100644 seller/__pycache__/__init__.cpython-310.pyc
+ create mode 100644 seller/__pycache__/admin.cpython-310.pyc
+ create mode 100644 seller/__pycache__/apps.cpython-310.pyc
+ create mode 100644 seller/__pycache__/models.cpython-310.pyc
+ create mode 100644 seller/__pycache__/urls.cpython-310.pyc
+ create mode 100644 seller/__pycache__/views.cpython-310.pyc
+ create mode 100644 seller/admin.py
+ create mode 100644 seller/apps.py
+ create mode 100644 seller/migrations/0001_initial.py
+ create mode 100644 seller/migrations/__init__.py
+ create mode 100644 seller/migrations/__pycache__/0001_initial.cpython-310.pyc
+ create mode 100644 seller/migrations/__pycache__/__init__.cpython-310.pyc
+ create mode 100644 seller/models.py
+ create mode 100644 seller/static/images/graph (1).png
+ create mode 100644 seller/static/images/hai.jpg
+ create mode 100644 seller/static/images/main-removebg-preview.png
+ create mode 100644 seller/static/images/main.jpg
+ create mode 100644 seller/static/style/sellerhome.css
+ create mode 100644 seller/templates/seller/add product.html
+ create mode 100644 seller/templates/seller/change password.html
+ create mode 100644 seller/templates/seller/home.html
+ create mode 100644 seller/templates/seller/product catalog.html
+ create mode 100644 seller/templates/seller/profile.html
+ create mode 100644 seller/templates/seller/update stock.html
+ create mode 100644 seller/templates/seller/view order,html
+ create mode 100644 seller/tests.py
+ create mode 100644 seller/urls.py
+ create mode 100644 seller/views.py
+
+Dell@DESKTOP-BRA207M MINGW64 ~/Desktop/project/ecommerce (master)
+$ git remote add origin https://github.com/vishnu-chengot/ecommercefinal.git
+
+Dell@DESKTOP-BRA207M MINGW64 ~/Desktop/project/ecommerce (master)
+$ git push origin master
+Enumerating objects: 179, done.
+Counting objects: 100% (179/179), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (168/168), done.
+Writing objects: 100% (179/179), 6.80 MiB | 3.78 MiB/s, done.
+Total 179 (delta 42), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (42/42), done.
+To https://github.com/vishnu-chengot/ecommercefinal.git
+ * [new branch]      master -> master
+
+Dell@DESKTOP-BRA207M MINGW64 ~/Desktop/project/ecommerce (master)
